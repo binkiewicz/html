@@ -1,0 +1,43 @@
+h1 {
+    color: gray;
+    font-family: sans-serif;
+    letter-spacing: -0.07em;
+}
+
+svg {
+    border: 1px solid gray;
+    float: left;
+    margin: 1em;
+}
+
+div#sekcja-pierwsza {float: left;}
+
+circle#anime {
+	motion-path: path('M202,352.8c-44.3,0-157.1-41-157.1-157.1S151.1,47.3,193.3,47.3s38,26.3-37.2,53.1s-80.2,102-52.7,146.3  s66.9,53.5,86.9,28.4s-73.6-46-56-96.1s54.3-56,81.9-41.8s-17.6,20.1-32.6,29.3c-15,9.2-14.2,54.3,41,64.4  c55.2,10,63.5-60.2,50.2-96.1c-13.4-35.9-22.6-62.7-4.2-76.1s56.8,20.9,70.2,49.3c13.4,28.4,23.4,117-31.8,142.1s-81.1,10-93.6,35.9  c-12.5,25.9,70.2,25.1,93.6,5.9c23.4-19.2,47.6-32.6,46-16.7c0,0-1.7,74.4-133.7,77.7');
+	display:inline-block;
+	animation: infinite scalextric linear 15s;
+}
+
+@keyframes scalextric {
+  0% { 
+    motion-offset: 0;
+  }
+  100% { 
+    motion-offset: 100%;
+  }
+}
+
+path#logo {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 5s linear infinite;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

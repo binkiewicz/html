@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width. initial-scale=1">
+    <title>ZADANIE 07</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Roboto+Slab:300" rel="stylesheet">
+</head>
+<body>
+    
+<header>
+    <h1>FORMULARZ - zadanie</h1>
+</header>  
+
+<section>
+    <aside>
+        <p>Jest dostępnych wiele różnych wersji Lorem Ipsum, ale większość zmieniła się pod wpływem dodanego humoru czy przypadkowych słów, które nawet w najmniejszym stopniu nie przypominają istniejących.</p>
+    </aside>
+        <form>
+            <fieldset>   
+            <label>Dane personalne</label>
+            <ul>
+                <li>
+                    <label for="imie">Imię:</label>
+                    <input type="text" name="imie">
+                </li>
+                <li>
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" name="nazwisko">
+                </li>
+                <li>
+                    <label>E-mail:</label><input type="email">
+                    </li>
+                <li>
+                    <label>Hasło:</label>
+                    <input type="password">
+                </li>
+                <li>
+                    <label>Powtórz hasło: </label>
+                    <input type="password">
+                </li>
+            </ul>
+            </fieldset>
+            <fieldset>          
+            <label>Ustawienia konta</label>
+                <ul>
+                    <li>
+                        <label>Otrzymywanie powiadomień:</label>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <label>Otrzymywanie reklam:</label>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <label>Otrzymywanie ofert:</label>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <label>Typ konta: </label>
+                        <input type="radio" value="normal" name="konto">Normalne
+                        <input type="radio" value="premium" name="konto" checked>Premium
+                        <input type="radio" value="pro" name="konto">Pro
+                    </li>
+                    <li>
+                        <label>Typ tokenu: </label>
+                        <select name="cars">
+                            <option value="mail">Przez E-mail</option>
+                            <option value="sms">SMS</option>
+                            <option value="code" selected>Karta Kodów</option>
+                        </select>
+                    </li>
+                
+                    <li class="buttons"><input type="submit" value="Zatwierdź"><input type="reset" value="Wyczyść"></li>
+                </ul>
+            </fieldset>    
+        </form>
+</section>
+
+
+<footer>
+    <p>Dziękuję za wypełnienie formularza</p>
+</footer>
+</body>
+</html>

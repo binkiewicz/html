@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	background-color: #CB77D7;
+	margin: 0 auto;
+	width: 50%;
+	}
+	
+nav {background-color: #D73DAB;}
+
+article {background-color: #FFAFF7}
+	
+img {
+	float: left;
+	margin: 0 5% 5% 0;
+	max-width: 55%;
+	}

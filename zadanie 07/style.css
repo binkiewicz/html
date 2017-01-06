@@ -1,0 +1,99 @@
+// *{border: 1px solid red;}
+
+body {    
+display:grid;
+grid-template-columns: auto 1fr;
+grid-template-rows: auto auto auto;
+grid-template-areas: "header header"
+                     "aside section"
+                     "footer footer";
+}
+
+
+header {grid-area: header;}
+aside {grid-area: aside;}
+section {grid-area: section;}
+footer {grid-area: footer;}
+
+body{ 
+    background-color: #f1f1f1;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+header {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+header h1, footer p {
+    color: gray;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    line-height: 32px; 
+}
+
+header h1 {
+    text-align: center;
+    margin: 15px;
+    padding-top: 25px;
+}
+
+section {
+    margin: 10px 0;
+}
+
+
+section form {
+    float: right;
+    width: 75%;
+}
+
+section form fieldset {
+    border: none;
+}
+
+section form fieldset>label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+section form fieldset ul {
+    margin: 0;
+    padding: 0;
+}
+
+section form fieldset ul li {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+section form fieldset ul li label {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+section form fieldset ul li select {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 180px;
+}
+
+section form fieldset ul li.buttons {margin: 15px 0;}
+
+section form fieldset ul li.buttons input {margin-right: 20px;}
+
+aside {
+    float: left;
+    margin: 9px 0;
+    width: 20%;
+}
+
+footer {
+    border-top: 1px solid gray;
+    text-align: center;
+}

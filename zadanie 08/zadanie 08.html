@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie 08</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rysowanie SVG</h1>
+<div id="sekcja-pierwsza">    
+    <!-- zadanie 01 -->
+    <!-- circle -->
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="40" stroke="gray" fill="lightgray" stroke-width="1">
+        </circle>
+    </svg>
+    
+    <!-- rect --->
+    <svg width="200" height="200">   
+        <rect x="75" y="75" height="50" width="50" style="stroke:gray; fill: lightgray"/>
+    </svg>    
+    
+    <!-- rect --->
+    <svg width="200" height="200"> 
+        <ellipse cx="100" cy="100" rx="50" ry="15" style="stroke:gray; fill:lightgray"/>
+    </svg>
+    
+    <!-- line -->
+    <svg width="200" height="200">
+        <line x1="50"  y1="50" x2="150"   y2="150" style="stroke:gray;"/>
+    </svg>
+    
+    <!-- polyline -->
+    <svg width="200" height="200">   
+        <polyline points="50,50  150,50  100,150 50,50" style="stroke:gray;"/>
+    </svg>
+    
+    <!-- polygon -->
+    <svg width="200" height="200">   
+        <polygon points="50,50  150,50  100,100" style="stroke:gray; fill:lightgray;"/>
+    </svg>
+    
+    <!-- path -->
+    <svg width="200" height="200">
+        <path 
+         d="M40,60
+            L80,60
+            L100,20
+            L120,60
+            L160,60
+            L140,100
+            L160,140
+            L120,140
+            L100,180
+            L80,140
+            L40,140
+            L60,100
+            L40,60"
+            style="stroke:gray; fill:none;"/>
+    </svg>         
+        
+    <!-- path -->
+    <svg width="200" height="200">    
+        <text x="40" y="100">PANDAMONIUM</text>
+    </svg>
+    
+    <!-- text on path -->
+    <svg width="200" height="200">  
+        <defs>
+            <path id="myTextPath"
+            d="M40,60
+            a1,1 0 0,0 100,0"/>
+        </defs>
+
+        <text x="10" y="100" style="stroke: #000000;">
+            <textPath xlink:href="#myTextPath" >
+            Pandamonium for life!!!
+            </textPath>
+        </text>  
+    </svg>  
+
+    <!-- zadanie 02 -->   
+    <svg width="200" height="200">
+        <g transform="rotate(15 100 100)">
+          <line x1="50" y1="50" x2="185" y2="110"
+              style="stroke: gray;"/>
+
+          <rect x="50" y="50" height="50" width="75"
+              style="stroke:gray; fill:lightgray"/>
+        </g>
+    </svg>  
+    
+    <!-- zadanie 03 -->   
+    <svg width="200" height="200">
+        <circle cx="30" cy="115" r="15" style="stroke: none; fill: gray">
+        <animate attributeName="cx" attributeType="XML"
+             from="30"  to="100"
+             begin="0s" dur="5s"
+             fill="remove" repeatCount="indefinite"/>
+        </circle>
+    </svg> 
+</div>
+   
+    <!-- zadanie 04 -->   
+    <svg width="400" height="400">
+        <circle id="anime" cx="30" cy="115" r="15" style="stroke: none; fill: gray">
+        <animate attributeName="cx" attributeType="XML"
+             from="30"  to="100"
+             begin="0s" dur="5s"
+             fill="remove" repeatCount="indefinite"/>
+        </circle>
+    </svg>
+    
+    <!-- zadanie 05 -->   
+    <svg width="400" height="400">
+         <path id="logo"
+         d="M179.2,107.6c21.7-10.8,18,3.6,10.8,14.4C164.8,154.6,92.6,234,99.8,259.2c7.2,21.7,39.7,28.9,108.3,3.6  c54.1-18,86.6-54.1,90.2-68.6c3.6-14.4-21.7-18-50.5-10.8c-25.3,7.2-54.1,18-57.8,21.7c-39.7,18-57.8,32.5-46.9,10.8  c3.6-10.8,0-10.8,18-18c18-7.2,68.6-28.9,75.8-39.7c7.2-10.8,3.6-10.8-25.3,0c-21.7,7.2-36.1,14.4-46.9,21.7  c-7.2,3.6-10.8,3.6-3.6-3.6c3.6-3.6,10.8-7.2,21.7-14.4c18-14.4,93.9-54.1,115.5-36.1c3.6,3.6,0,14.4-7.2,21.7  c-10.8,7.2-25.3,18-28.9,18c0,0,39.7-10.8,75.8-10.8c18,0,25.3,7.2,28.9,14.4c10.8,28.9-57.8,65-75.8,75.8  c-21.7,10.8-46.9,21.7-72.2,32.5c-14.4,7.2-50.5,14.4-83,18c-39.7,3.6-75.8-3.6-72.2-32.5c0-21.7,36.1-61.4,46.9-75.8  c7.2-10.8,25.3-28.9,32.5-36.1c0-3.6,3.6-3.6,3.6-7.2c0,0-3.6,0-7.2,0c-10.8,7.2-36.1,18-57.8,28.9c0,18-3.6,36.1-10.8,46.9  c-14.4,21.7-10.8-10.8-14.4-25.3c0-3.6,0-3.6-3.6-7.2l0,0c-7.2,3.6-36.1,10.8-10.8-7.2c3.6-3.6,7.2-3.6,10.8-7.2  c0-7.2,3.6-14.4,7.2-21.7c10.8-14.4,14.4-7.2,18,7.2c28.9-14.4,61.4-32.5,97.5-46.9L179.2,107.6z M330.8,248.4  c18,0,3.6,10.8,3.6,21.7s-3.6,18-14.4,18C294.8,288.1,312.8,248.4,330.8,248.4z"
+            style="stroke:gray; fill:none;"/>
+    </svg>  
+    
+    
+</body>
+</html>

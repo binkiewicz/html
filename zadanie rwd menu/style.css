@@ -1,0 +1,197 @@
+body {
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+.important {color: #c3a572;}
+
+div.info {
+    background-color: #ebebeb;
+    font-size: .7rem;
+    font-weight: bolder;
+    line-height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+nav {
+    height: 48px;
+    width: 100%;
+}
+
+nav span.logo {
+    background-color: black;
+    float: left;
+    height: 100%;
+    text-align: center;
+    width: 50px;
+	transition: all 0.5s ease;
+}
+
+nav span.logo:hover {background-color: #c3a572;;}
+
+nav span.logo img {
+    position: relative;
+    top: 14px;
+    width: 30px;
+}
+
+nav ul {
+    width: calc(100% - 50px);
+    overflow: hidden;
+}
+
+nav ul li {
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    width: 33.3333333334%;
+}
+
+nav ul li.tablet,
+nav ul li.desktop {display: none;}
+
+nav ul li a {
+    background-color: white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    color: black;
+    display: block;
+    font-size: .8rem;
+    font-weight: bold;
+    line-height: calc(3rem - 6px);
+    text-decoration: none;
+    text-transform: uppercase;
+	transition: all 0.5s ease;
+}
+
+
+nav ul li a:hover {border-bottom: 3px solid #c3a572;}
+
+nav ul li.more:hover .submenu{display: block;}
+
+nav ul li ul.submenu {
+    border-bottom: 3px solid #c3a572;
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+nav ul li ul.submenu li {
+    display: block;
+    float: none;
+    width: 100%;
+}
+
+nav ul li ul.submenu li a {
+    background-color: black;
+    border-top: none;
+    border-bottom: none;
+    color: white;
+    font-size: .8rem;
+	transition: all 0.5s ease;
+}
+
+nav ul li ul.submenu li a:hover {background-color: #231f20;}
+
+div.slider {
+    background: black url(assets/background.png) center no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    font-size: .8rem;
+}
+
+div.slider a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+div.slider h2 {
+    background-color: black;
+    color: #c3a572;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    position: relative;
+}
+
+div.slider h2 span {
+    background-color: white;
+    color: black;
+    display: block;
+    height: 1.5rem;
+    float: left;
+    left: -.7rem;
+    line-height: 1.5rem;
+    position: absolute;
+    text-align: center;
+    top: -.7rem;
+    width: 1.5rem;    
+}
+
+div.slider p {
+    border: 3px solid #c3a572;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+div.slider p a.button {
+    background-color: #c3a572;
+    bottom: calc(-1rem);
+    color: black;
+    display: block;
+    float: right;
+    font-weight: 700;
+    padding: .4rem .6rem;
+    position: absolute;
+    right: -3px;
+    text-decoration: none;
+}
+
+div.slider p a.button:hover {
+    background-color: black;
+    color: #c3a572;
+}
+
+
+/* media queries*/
+
+/* mobile */
+@media all and (max-width: 300px) {
+    nav ul li a {font-size: .6rem;}
+    nav ul li ul.submenu li a {font-size: .6rem;}
+}
+
+/* phones */
+@media all and (min-width: 600px) {
+    nav ul li {width: 20%;}
+    nav ul li.tablet {display: block;}
+    nav ul li ul.submenu li.tablet-more {display: none;}
+    div.slider {
+        padding-top: 10rem;
+    }
+    div.slider h2,
+    div.slider p {
+        box-sizing: border-box;
+        max-width: 70%;
+        margin: 1rem auto;
+    }
+}
+
+/* desktops */
+@media all and (min-width: 1100px) {
+    nav ul li {width: 16.6666666667%;}
+    nav ul li.desktop {display: block;}
+    nav ul li.more {display: none;}
+}

@@ -1,0 +1,148 @@
+body {
+    background-color: #f1f1f1;
+    font-family: 'Roboto Slab'. serif;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+header {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+div.menu, .menu nav {
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.menu p {
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex: 1 100%;
+    justify-content: center;
+}
+
+.menu nav {display: none;}
+
+.menu:hover nav {display: block;}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    flex: 1 100%;
+}
+
+nav ul li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    line-height: 2rem;
+    flex: 1 100%; 
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: deepskyblue;
+}
+
+header h1. section p span. section h2. footer h3 {
+    color: gray;
+    font-family: 'Open Sans Condensed'. sans-serif;
+    font-size: 25px;
+    line-height: 32px; 
+}
+
+header>img {
+    background-color: white;
+    max-width: 350px;
+    max-height: 150px;
+    display: block;
+    margin: 15px auto;
+    transform: rotate(-5deg);
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0.0.0.0.25);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0.0.0.0.25);
+    box-shadow: 5px 5px 15px 0px rgba(0.0.0.0.25);
+}
+
+header h1 {
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0.0.0.0.55);
+    margin: 15px;
+    padding-top: 25px;
+}
+
+aside figure>img {
+    max-height: 200px;
+    max-width: 180px;
+    border: 1px solid gray;
+}
+
+section p span {
+    color: gray;
+    border-bottom: 1px solid gray;
+    display: inline-block;
+    float: left;
+    font-size: 2rem;
+    margin: 10px 10px 20px;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+section h2 {
+    background-color: white;
+    border: 1px solid lightgray;
+    flex: 1 100%;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+section p {
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-right: 15px;
+    padding: 15px;
+}
+
+aside {margin: 9px 0;}
+
+footer {
+    border-top: 1px solid gray;
+    text-align: center;
+}
+
+header. aside. section. footer {flex: 1 100%;}
+aside {order: 1}
+footer {order: 2;}
+
+
+@media (min-width: 800px) {
+    header {flex: 1 100%;}
+    aside {flex: 1; order: 0;}
+    section {
+    display: flex; 
+    flex-wrap: wrap;    
+    flex: 4;
+    }
+    section p {flex: 1 25%;}
+    footer {flex:1 100%;}
+}

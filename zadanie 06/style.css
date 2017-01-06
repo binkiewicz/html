@@ -1,0 +1,105 @@
+@media all and (min-width: 800px) {
+    body {    
+    display:grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "header header"
+						 "aside section"
+						 "footer footer";
+    }
+}
+
+@media all and (max-width: 799px)
+{    
+    display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "header"
+						 "section"
+						 "aside" 
+                         "footer";
+}
+
+header {grid-area: header;}
+aside {grid-area: aside;}
+section {grid-area: section;}
+footer {grid-area: footer;}
+
+body{ 
+    background-color: #f1f1f1;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+header {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+header h1, section p span, section h2, footer h3 {
+    color: gray;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    line-height: 32px; 
+}
+
+header>img {
+    background-color: white;
+    max-width: 350px;
+    max-height: 150px;
+    margin: 15px auto;
+    display: block;
+    transform: rotate(-5deg);
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.25);
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.25);
+}
+
+header h1 {
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(00,0,0,0.55);
+    margin: 15px;
+    padding-top: 25px;
+}
+
+aside figure>img {
+    max-height: 200px;
+    max-width: 180px;
+    border: 1px solid gray;
+}
+
+section {
+    margin: 10px 0;
+    column-width: 300px;
+}
+
+section p span {
+    color: gray;
+    border-bottom: 1px solid gray;
+    display: inline-block;
+    float: left;
+    font-size: 2rem;
+    margin: 10px 10px 20px;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+section h2 {
+    background-color: white;
+    border: 1px solid lightgray;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+aside {margin: 9px 0;}
+
+footer {
+    border-top: 1px solid gray;
+    text-align: center;
+}

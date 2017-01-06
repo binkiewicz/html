@@ -1,0 +1,33 @@
+
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+
+    width: 80%;
+    max-width: 600px;
+    border: 1px solid white;
+    margin: 25vh auto;
+    border-collapse: collapse;
+}
+
+td {
+    color: midnightblue;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 10px;
+
+}
+
+tr:nth-child(even){
+      background-color: #e8edff;
+}
+
+.top {
+    font-weight: bold;
+}
